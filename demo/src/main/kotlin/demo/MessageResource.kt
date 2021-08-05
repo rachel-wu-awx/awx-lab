@@ -10,8 +10,10 @@ class MessageResource(val service: MessageService) {
     fun index(): List<Message> = service.findMessages()
 
     @PostMapping("/message")
-    fun post(@RequestBody message: Message) {
-        service.post(message)
+    fun post(@RequestBody message: Message): Message {
+        var resutl = service.post(message)
+        return  resutl
+
     }
 
 }
