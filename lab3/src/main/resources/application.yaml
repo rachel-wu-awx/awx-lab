@@ -1,0 +1,4 @@
+application:
+    service:
+      api:
+        baseUrl: http://localhost:8080
